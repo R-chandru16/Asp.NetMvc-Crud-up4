@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AWFTcywN+HAFEphVmLlqLlRCYEQJH5HRhMMFXcc+Y7kaI8AQv68vY/85JOFgG9j+bHepkOVN/NxA8r8iUmUDow==",
+  "dgSpecHash": "TYPi2U/iAzQGOfNy2tZW05OR2FhI01gOIuW2bvmfAMBmr1Ho2L7Fyc0cvl3SoSb/rKj6YjRA8+R4FQS5sgRfcQ==",
   "success": true,
-  "projectFilePath": "D:\\Asp.net student update2\\Asp.Net mvc crud\\Asp.net student.csproj",
+  "projectFilePath": "D:\\Asp.netnewup\\Asp.netup 2\\Asp.Net mvc crud\\Asp.net student.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

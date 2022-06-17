@@ -1,6 +1,10 @@
 ﻿
 
 @model IEnumerable<Asp.net_student.Models.Student>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+}
 
 
 <!DOCTYPE html>
@@ -17,26 +21,19 @@
 </head>
 <body style="background-color: peachpuff !important ">
 
-    <a href="@Url.Action("Index","Users")">
-        @*<a class="navbar-brand" asp-area="" asp-controller="" asp-action="" onclick="return confirm('Are you sure you want to logout??')" />*@
-        @*<a class="fa fa-sign-out" style="font-size:24px;color:red; padding-left:1000px" onclick="return confirm('Are you sure you want to logout??')"> Log out</button>*@
-            <div style="font-size:24px;color:red; padding-left:1000px">
-                <a class="fa fa-sign-out" asp-controller="Users" asp-action="index" onclick="return confirm('Are you sure you want to logout??')">
-                    Log out</a>
-                  
-            </div>
+    
 
         <div class="btn">
             &nbsp;&nbsp;
             @*<form asp-action="index" method="post">
-                <div class="row input-group">
-                    <input type="text" name="search" id="search" class="form-control" />
-                    <div class="input-group-btn">
-                        <input type="submit" value="search" class="btn btn-primary" />
+                    <div class="row input-group">
+                        <input type="text" name="search" id="search" class="form-control" />
+                        <div class="input-group-btn">
+                            <input type="submit" value="search" class="btn btn-primary" />
 
+                        </div>
                     </div>
-                </div>
-            </form>*@
+                </form>*@
             @using (Html.BeginForm("Index", "Students", FormMethod.Post))
             {
                 <div>
@@ -126,6 +123,13 @@
             @await Html.PartialAsync("_Pagination", 10)
 
         </div>
+        <script>
+            $(document).ready(function () {
+                $("#register").hide();
+                $("#login").hide();
+              
+            });
+        </script>
 </body>
 </html>
 

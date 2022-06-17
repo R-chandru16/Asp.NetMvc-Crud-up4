@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 
 using Asp.net_student.Services;
 using Asp.net_student.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Asp.net_student
 {
@@ -37,6 +39,11 @@ namespace Asp.net_student
             );
             services.AddScoped<IRepo<Student>, StudentRepo>();
             services.AddScoped<LoginRepo<Users>,LoginService>();
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+            services.AddControllers();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,10 +58,11 @@ namespace Asp.net_student
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
-
             app.UseRouting();
+            app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {
